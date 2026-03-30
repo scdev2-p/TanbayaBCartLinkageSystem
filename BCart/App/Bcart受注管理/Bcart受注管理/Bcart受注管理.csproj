@@ -1,0 +1,87 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Nlog.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Nlog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dynamicweb.WebP" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="6.1.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Common\BCartApi\BCartApi.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BarcodeImageWriter">
+      <HintPath>\\172.18.88.15\Share\1共通\017.流通・サービス開発部\03_流通・サービスグループ\03_プロジェクト\97_丹波屋_システムアセスメント\999_SourceCode\Common\BarcodeImageWriter\BarcodeImageWriter\bin\Debug\BarcodeImageWriter.exe</HintPath>
+    </Reference>
+    <Reference Include="BCartApi">
+      <HintPath>\\172.18.88.15\Share\1共通\017.流通・サービス開発部\03_流通・サービスグループ\03_プロジェクト\97_丹波屋_システムアセスメント\999_SourceCode\Common\BCartApi\bin\Debug\net8.0\BCartApi.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="AppData\Ds\dsBCartLink.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsBCartLink.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="AppData\Ds\dsBCartLink2.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsBCartLink2.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="AppData\Ds\dsTnb.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsTnb.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\PrintPickingListDocument_x1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="AppData\Ds\dsBCartLink.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBCartLink.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="AppData\Ds\dsBCartLink2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBCartLink2.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="AppData\Ds\dsTnb.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTnb.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

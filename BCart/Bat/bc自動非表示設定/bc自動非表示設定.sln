@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bc自動非表示設定", "bc自動非表示設定\bc自動非表示設定.csproj", "{3FE01247-CDA3-4826-912F-C886F6D6CCB2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BCartApi", "..\..\..\Common\BCartApi\BCartApi.csproj", "{DF14F14D-0274-444A-81B1-40508E4FA885}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3FE01247-CDA3-4826-912F-C886F6D6CCB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FE01247-CDA3-4826-912F-C886F6D6CCB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FE01247-CDA3-4826-912F-C886F6D6CCB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FE01247-CDA3-4826-912F-C886F6D6CCB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF14F14D-0274-444A-81B1-40508E4FA885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF14F14D-0274-444A-81B1-40508E4FA885}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF14F14D-0274-444A-81B1-40508E4FA885}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF14F14D-0274-444A-81B1-40508E4FA885}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {36B03A8E-4E5B-4162-B529-040B001020EA}
+	EndGlobalSection
+EndGlobal

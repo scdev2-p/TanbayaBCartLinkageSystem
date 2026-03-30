@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bcart顧客取得wk", "Bcart顧客取得wk\Bcart顧客取得wk.csproj", "{53FCE961-E80B-4038-8331-6DC453BA6E7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BCartApi", "..\..\..\Common\BCartApi\BCartApi.csproj", "{93D0866B-7DE5-4DEE-93C3-7B0EA537F341}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53FCE961-E80B-4038-8331-6DC453BA6E7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53FCE961-E80B-4038-8331-6DC453BA6E7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53FCE961-E80B-4038-8331-6DC453BA6E7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53FCE961-E80B-4038-8331-6DC453BA6E7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93D0866B-7DE5-4DEE-93C3-7B0EA537F341}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93D0866B-7DE5-4DEE-93C3-7B0EA537F341}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93D0866B-7DE5-4DEE-93C3-7B0EA537F341}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93D0866B-7DE5-4DEE-93C3-7B0EA537F341}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

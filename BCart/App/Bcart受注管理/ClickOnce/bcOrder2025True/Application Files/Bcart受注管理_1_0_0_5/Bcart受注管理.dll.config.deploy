@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="Bcart受注管理.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+        </sectionGroup>
+        <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="Bcart受注管理.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <connectionStrings>
+        <add name="Bcart受注管理.Settings.TnbDBConnectionString" connectionString="Data Source=TKYSVTNB0509;Initial Catalog=tnb;Persist Security Info=True;User ID=tnb;Password=tnb;Encrypt=False;TrustServerCertificate=True"
+            providerName="System.Data.SqlClient" />
+        <add name="Bcart受注管理.Settings.BCartDBConnectionString" connectionString="Data Source=TKYSVTNB0509;Initial Catalog=tnbToBCart;Persist Security Info=True;User ID=tnb;Password=tnb;Encrypt=False;TrustServerCertificate=True"
+            providerName="System.Data.SqlClient" />
+        <add name="Bcart受注管理.Settings.Ds1DBConnectionString" connectionString="Data Source=TKYSVTNB0509;Initial Catalog=ds1;Persist Security Info=True;User ID=tnb;Password=tnb;Encrypt=False;TrustServerCertificate=True"
+            providerName="System.Data.SqlClient" />
+    </connectionStrings>
+    <userSettings>
+        <Bcart受注管理.Settings>
+            <setting name="PrinterDevice" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="ListLimit" serializeAs="String">
+                <value>1000</value>
+            </setting>
+            <setting name="LogPath" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="BCartHttpClientName" serializeAs="String">
+                <value>Bcart</value>
+            </setting>
+            <setting name="BCartApiToken" serializeAs="String">
+                <value>eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5IiwianRpIjoiZmUyZjY3MzMyNGQxNzM4ZjYyZDk2ZmI5YmNlMmYwMzFkMThmMTMzY2JjNWU3MmRmMDA2OGRjODMzMzZjNjk3Y2UwYjQwZDY3YjM0YzYyNmEiLCJpYXQiOjE3MDY2Nzg3NjMsIm5iZiI6MTcwNjY3ODc2MywiZXhwIjoxNzM4MzAxMTYzLCJzdWIiOiI4ODQiLCJzY29wZXMiOlsidXNlci1yZWFkIiwicHJvZHVjdHMtcmVhZCIsInByb2R1Y3RzLXdyaXRlIiwicHJvZHVjdF9jdXN0b21zLXJlYWQiLCJwcm9kdWN0X2N1c3RvbXMtd3JpdGUiLCJwcm9kdWN0X3NldHMtcmVhZCIsInByb2R1Y3Rfc2V0cy13cml0ZSIsInByb2R1Y3Rfc2V0X29wdGlvbnMtcmVhZCIsInByb2R1Y3Rfc2V0X29wdGlvbnMtd3JpdGUiLCJwcm9kdWN0X3NldF9jdXN0b21zLXJlYWQiLCJwcm9kdWN0X3NldF9jdXN0b21zLXdyaXRlIiwicHJvZHVjdF9zdG9jay1yZWFkIiwicHJvZHVjdF9zdG9jay13cml0ZSIsImNhdGVnb3JpZXMtd3JpdGUiLCJjYXRlZ29yaWVzLXJlYWQiLCJjdXN0b21lcnMtcmVhZCIsImN1c3RvbWVycy13cml0ZSIsImN1c3RvbWVyX2N1c3RvbXMtcmVhZCIsImN1c3RvbWVyX2N1c3RvbXMtd3JpdGUiLCJvdGhlcl9hZGRyZXNzZXMtcmVhZCIsIm90aGVyX2FkZHJlc3Nlcy13cml0ZSIsIm9yZGVyX3N0YXR1c2VzLXJlYWQiLCJvcmRlcl9zdGF0dXNlcy13cml0ZSIsIm9yZGVycy1yZWFkIiwib3JkZXJzLXdyaXRlIiwib3JkZXJfcHJvZHVjdHMtcmVhZCIsIm9yZGVyX3Byb2R1Y3RzLXdyaXRlIiwib3JkZXJfY3VzdG9tcy1yZWFkIiwib3JkZXJfY3VzdG9tcy13cml0ZSIsImxvZ2lzdGljcy1yZWFkIiwibG9naXN0aWNzLXdyaXRlIiwicHJpY2VfZ3JvdXBzLXJlYWQiLCJ2aWV3X2dyb3Vwcy1yZWFkIiwic2hpcHBpbmdfZ3JvdXBzLXJlYWQiLCJwcm9kdWN0X2ZlYXR1cmVzLXJlYWQiLCJwcm9kdWN0X2ZlYXR1cmVzLXdyaXRlIiwiYm9va21hcmtzLXJlYWQiLCJib29rbWFya3Mtd3JpdGUiLCJwb2ludHMtcmVhZCIsInBvaW50cy13cml0ZSIsImVzdGltYXRlcy1yZWFkIiwiZXN0aW1hdGVfcHJvZHVjdHMtcmVhZCJdfQ.AsxaC3j5pTVqwpTmnNSJNfTU-Se0QU2YMIoBvz33lkoj8m4p1RcJBFg4r6QqVIfrB1DZAx2M8AoR8AgAwWZKYM3lLYDzsKYUHpYaD4pcZ8lo1ZtMjngJt_G-rQQnyQ6rhz_iSFsqYdv5XwZIXaj_OeCAr0JpGvZapjs7oE5G8XBfM_lEz2JTi_16rR1XQwohP6ZZtCzNgYC6vtIQ8vXybcrDhSpUDx5beRWYDtFSnuN_Rp6qd7pEdBqTjrNw2UPmr6QwtvCzX-rhlWSL4Kc6U7TeD-5r6eoXgmO-MVxr2jFNsRGi3caWY6X-a5d0GCtH7VMLHAuLPS8sSRu0dFN_xYk6dQasYS1n6mHUEkJKHIJ-WekSdCMkFYmEn7rEs2-_x7ZDlHivJvaqBchDGMm7Uk-PcJ8xDvr_V84QgMFCh8-s7ya4NEyvEqgFwcWTpQ0xqPjDk6MZIZ9XoeMl0BBend_GI83IuEZcCDU2IkoqV6mlWqvY_nhRoUk0xWgqbZm_FRVTDDeZPqZKx_NY0DsCaRVqpOiCQpKC0mLBfCEhRN7NRd2KN7o7xKdm4sa8KeyfGDA0vLM3BWfUIZ6n_P7Z0-xdhcVRnl9aShJaXI-x0FWbfj9luCfNdONFb1SwUM_T2zYjxrDgkcSYlQfrYVUWH1MQkQHBoNMfJT064wOt0_0</value>
+            </setting>
+            <setting name="BCartApiBaseUrl" serializeAs="String">
+                <value>https://api.bcart.jp/api/v1/</value>
+            </setting>
+            <setting name="RegistTnb" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="PrintPreview" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="Version" serializeAs="String">
+                <value>1.4.4</value>
+            </setting>
+            <setting name="Limit" serializeAs="String">
+                <value>100</value>
+            </setting>
+            <setting name="TimeoutInSeconds" serializeAs="String">
+                <value>360</value>
+            </setting>
+        </Bcart受注管理.Settings>
+    </userSettings>
+  <appSettings>
+    <add key="ApiUrl" value="https://api.bcart.jp/api/v1/"/>
+    <add key="ApiToken" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5IiwianRpIjoiZmUyZjY3MzMyNGQxNzM4ZjYyZDk2ZmI5YmNlMmYwMzFkMThmMTMzY2JjNWU3MmRmMDA2OGRjODMzMzZjNjk3Y2UwYjQwZDY3YjM0YzYyNmEiLCJpYXQiOjE3MDY2Nzg3NjMsIm5iZiI6MTcwNjY3ODc2MywiZXhwIjoxNzM4MzAxMTYzLCJzdWIiOiI4ODQiLCJzY29wZXMiOlsidXNlci1yZWFkIiwicHJvZHVjdHMtcmVhZCIsInByb2R1Y3RzLXdyaXRlIiwicHJvZHVjdF9jdXN0b21zLXJlYWQiLCJwcm9kdWN0X2N1c3RvbXMtd3JpdGUiLCJwcm9kdWN0X3NldHMtcmVhZCIsInByb2R1Y3Rfc2V0cy13cml0ZSIsInByb2R1Y3Rfc2V0X29wdGlvbnMtcmVhZCIsInByb2R1Y3Rfc2V0X29wdGlvbnMtd3JpdGUiLCJwcm9kdWN0X3NldF9jdXN0b21zLXJlYWQiLCJwcm9kdWN0X3NldF9jdXN0b21zLXdyaXRlIiwicHJvZHVjdF9zdG9jay1yZWFkIiwicHJvZHVjdF9zdG9jay13cml0ZSIsImNhdGVnb3JpZXMtd3JpdGUiLCJjYXRlZ29yaWVzLXJlYWQiLCJjdXN0b21lcnMtcmVhZCIsImN1c3RvbWVycy13cml0ZSIsImN1c3RvbWVyX2N1c3RvbXMtcmVhZCIsImN1c3RvbWVyX2N1c3RvbXMtd3JpdGUiLCJvdGhlcl9hZGRyZXNzZXMtcmVhZCIsIm90aGVyX2FkZHJlc3Nlcy13cml0ZSIsIm9yZGVyX3N0YXR1c2VzLXJlYWQiLCJvcmRlcl9zdGF0dXNlcy13cml0ZSIsIm9yZGVycy1yZWFkIiwib3JkZXJzLXdyaXRlIiwib3JkZXJfcHJvZHVjdHMtcmVhZCIsIm9yZGVyX3Byb2R1Y3RzLXdyaXRlIiwib3JkZXJfY3VzdG9tcy1yZWFkIiwib3JkZXJfY3VzdG9tcy13cml0ZSIsImxvZ2lzdGljcy1yZWFkIiwibG9naXN0aWNzLXdyaXRlIiwicHJpY2VfZ3JvdXBzLXJlYWQiLCJ2aWV3X2dyb3Vwcy1yZWFkIiwic2hpcHBpbmdfZ3JvdXBzLXJlYWQiLCJwcm9kdWN0X2ZlYXR1cmVzLXJlYWQiLCJwcm9kdWN0X2ZlYXR1cmVzLXdyaXRlIiwiYm9va21hcmtzLXJlYWQiLCJib29rbWFya3Mtd3JpdGUiLCJwb2ludHMtcmVhZCIsInBvaW50cy13cml0ZSIsImVzdGltYXRlcy1yZWFkIiwiZXN0aW1hdGVfcHJvZHVjdHMtcmVhZCJdfQ.AsxaC3j5pTVqwpTmnNSJNfTU-Se0QU2YMIoBvz33lkoj8m4p1RcJBFg4r6QqVIfrB1DZAx2M8AoR8AgAwWZKYM3lLYDzsKYUHpYaD4pcZ8lo1ZtMjngJt_G-rQQnyQ6rhz_iSFsqYdv5XwZIXaj_OeCAr0JpGvZapjs7oE5G8XBfM_lEz2JTi_16rR1XQwohP6ZZtCzNgYC6vtIQ8vXybcrDhSpUDx5beRWYDtFSnuN_Rp6qd7pEdBqTjrNw2UPmr6QwtvCzX-rhlWSL4Kc6U7TeD-5r6eoXgmO-MVxr2jFNsRGi3caWY6X-a5d0GCtH7VMLHAuLPS8sSRu0dFN_xYk6dQasYS1n6mHUEkJKHIJ-WekSdCMkFYmEn7rEs2-_x7ZDlHivJvaqBchDGMm7Uk-PcJ8xDvr_V84QgMFCh8-s7ya4NEyvEqgFwcWTpQ0xqPjDk6MZIZ9XoeMl0BBend_GI83IuEZcCDU2IkoqV6mlWqvY_nhRoUk0xWgqbZm_FRVTDDeZPqZKx_NY0DsCaRVqpOiCQpKC0mLBfCEhRN7NRd2KN7o7xKdm4sa8KeyfGDA0vLM3BWfUIZ6n_P7Z0-xdhcVRnl9aShJaXI-x0FWbfj9luCfNdONFb1SwUM_T2zYjxrDgkcSYlQfrYVUWH1MQkQHBoNMfJT064wOt0_0"/>
+    <add key="LogPath" value="C:\Logs"/>
+  </appSettings>  
+  <applicationSettings>
+    <Bcart受注管理.Settings>
+      <setting name="SagawaPath" serializeAs="String">
+        <value>K:\sagawa_本日出荷分.csv</value>
+      </setting>
+      <setting name="ProductImagePath" serializeAs="String">
+        <value>\\tkysvfs0502\Share\01_共有\06_システム関連共有\001_EC関連\001_ピッキングリスト用商品画像</value>
+      </setting>
+    </Bcart受注管理.Settings>
+  </applicationSettings>
+</configuration>

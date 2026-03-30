@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      autoReload="true"
+      internalLogLevel="Off"
+      internalLogFile="internal-nlog.txt">
+	<targets async="true">
+		<target xsi:type="File" name="debuglog"
+				fileName="C:/logs/${machinename}/debug.log"
+				archiveFileName="C:/logs/${machinename}/archive/debug_{#}.log.zip"
+				archiveEvery="Day"
+				archiveNumbering="Rolling"
+				maxArchiveFiles="7"
+				enableArchiveFileCompression="true"
+				layout="${longdate}|${machinename}|${processid}||${uppercase:${level}}|${callsite}|${event-properties:item=EventId_Id}|${logger}|${message}" />
+		<target xsi:type="File" name="infolog"
+				fileName="C:/logs/${machinename}/info.log"
+				archiveFileName="C:/logs/${machinename}/archive/info_{#}.log.zip"
+				archiveEvery="Day"
+				archiveNumbering="Rolling"
+				maxArchiveFiles="7"
+				enableArchiveFileCompression="true"
+				layout="${longdate}|${machinename}|${processid}|${uppercase:${level}}|${callsite}|${event-properties:item=EventId_Id}|${logger}|${message} ${exception:format=tostring}" />
+		<target xsi:type="File" name="errorlog"
+				fileName="C:/logs/${machinename}/error.log"
+				archiveFileName="C:/logs/${machinename}/archive/error_{#}.log.zip"
+				archiveEvery="Day"
+				archiveNumbering="Date"
+				enableArchiveFileCompression="true"
+				layout="${longdate}|${machinename}|${processid}|${uppercase:${level}}|${callsite}|${event-properties:item=EventId_Id}|${logger}|${message} ${exception:format=tostring}" />
+	</targets>
+	<rules>
+		<logger name="*" maxlevel="Debug" writeTo="debuglog" />
+		<logger name="Microsoft.*" maxLevel="Info" final="true" />
+		<logger name="*" levels="Error,Fatal" writeTo="errorlog" />
+		<logger name="*" minlevel="Info" writeTo="infolog" />
+	</rules>
+</nlog>
