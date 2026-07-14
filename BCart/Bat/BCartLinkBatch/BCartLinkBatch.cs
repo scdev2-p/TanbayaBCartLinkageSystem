@@ -57,7 +57,7 @@ namespace BCartLinkBatch
                     bool isBreak = false;
 
                     // トランザクション処理開始
-                    using (TransactionScope ts = new TransactionScope())
+                    using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Required, TimeSpan.FromSeconds(180)))
                     {
                         try
                         {
@@ -287,7 +287,7 @@ namespace BCartLinkBatch
                     bool isBreak = false;
 
                     // トランザクション処理開始
-                    using (TransactionScope ts = new TransactionScope())
+                    using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Required, TimeSpan.FromSeconds(180)))
                     {
                         try
                         {
