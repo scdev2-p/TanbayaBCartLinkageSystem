@@ -242,5 +242,16 @@ namespace Bcart受注管理.Forms
             }
             Program.ScLogger.Info($"end");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Program.ScLogger.Info($"start");
+            // レジ事前取込の修正
+            using (frmRegiEditList frm = new frmRegiEditList())
+            {
+                frm.ShowDialog();
+            }
+            Program.ScLogger.Info($"end");
+        }
     }
 }

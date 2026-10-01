@@ -40,6 +40,8 @@ namespace Bcart受注管理.AppData.Ds {
         
         private PickingDetailDataTable tablePickingDetail;
         
+        private W_レジ伝票明細DataTable tableW_レジ伝票明細;
+        
         private global::System.Data.DataRelation relationFK_bc_OrderProducts_bc_Order;
         
         private global::System.Data.DataRelation relationFK_bc_OrderProducts_bc_Order1;
@@ -97,6 +99,9 @@ namespace Bcart受注管理.AppData.Ds {
                 }
                 if ((ds.Tables["PickingDetail"] != null)) {
                     base.Tables.Add(new PickingDetailDataTable(ds.Tables["PickingDetail"]));
+                }
+                if ((ds.Tables["W_レジ伝票明細"] != null)) {
+                    base.Tables.Add(new W_レジ伝票明細DataTable(ds.Tables["W_レジ伝票明細"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -198,6 +203,16 @@ namespace Bcart受注管理.AppData.Ds {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public W_レジ伝票明細DataTable W_レジ伝票明細 {
+            get {
+                return this.tableW_レジ伝票明細;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -287,6 +302,9 @@ namespace Bcart受注管理.AppData.Ds {
                 if ((ds.Tables["PickingDetail"] != null)) {
                     base.Tables.Add(new PickingDetailDataTable(ds.Tables["PickingDetail"]));
                 }
+                if ((ds.Tables["W_レジ伝票明細"] != null)) {
+                    base.Tables.Add(new W_レジ伝票明細DataTable(ds.Tables["W_レジ伝票明細"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -368,6 +386,12 @@ namespace Bcart受注管理.AppData.Ds {
                     this.tablePickingDetail.InitVars();
                 }
             }
+            this.tableW_レジ伝票明細 = ((W_レジ伝票明細DataTable)(base.Tables["W_レジ伝票明細"]));
+            if ((initTable == true)) {
+                if ((this.tableW_レジ伝票明細 != null)) {
+                    this.tableW_レジ伝票明細.InitVars();
+                }
+            }
             this.relationFK_bc_OrderProducts_bc_Order = this.Relations["FK_bc_OrderProducts_bc_Order"];
             this.relationFK_bc_OrderProducts_bc_Order1 = this.Relations["FK_bc_OrderProducts_bc_Order1"];
         }
@@ -396,6 +420,8 @@ namespace Bcart受注管理.AppData.Ds {
             base.Tables.Add(this.tablevwBc受注顧客住所);
             this.tablePickingDetail = new PickingDetailDataTable();
             base.Tables.Add(this.tablePickingDetail);
+            this.tableW_レジ伝票明細 = new W_レジ伝票明細DataTable();
+            base.Tables.Add(this.tableW_レジ伝票明細);
             this.relationFK_bc_OrderProducts_bc_Order = new global::System.Data.DataRelation("FK_bc_OrderProducts_bc_Order", new global::System.Data.DataColumn[] {
                         this.tablebc_Order.order_idColumn}, new global::System.Data.DataColumn[] {
                         this.tablebc_OrderProducts.order_idColumn}, false);
@@ -451,6 +477,12 @@ namespace Bcart受注管理.AppData.Ds {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializePickingDetail() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeW_レジ伝票明細() {
             return false;
         }
         
@@ -532,6 +564,9 @@ namespace Bcart受注管理.AppData.Ds {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void PickingDetailRowChangeEventHandler(object sender, PickingDetailRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void W_レジ伝票明細RowChangeEventHandler(object sender, W_レジ伝票明細RowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -5634,6 +5669,637 @@ namespace Bcart受注管理.AppData.Ds {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "PickingDetailDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class W_レジ伝票明細DataTable : global::System.Data.TypedTableBase<W_レジ伝票明細Row> {
+            
+            private global::System.Data.DataColumn column伝票年月日;
+            
+            private global::System.Data.DataColumn column入力レジ番号;
+            
+            private global::System.Data.DataColumn columnカード番号;
+            
+            private global::System.Data.DataColumn column明細番号;
+            
+            private global::System.Data.DataColumn column商品管理番号;
+            
+            private global::System.Data.DataColumn column商品コード;
+            
+            private global::System.Data.DataColumn columnバーコード;
+            
+            private global::System.Data.DataColumn column商品グループコード;
+            
+            private global::System.Data.DataColumn column商品名;
+            
+            private global::System.Data.DataColumn column仕入先コード;
+            
+            private global::System.Data.DataColumn column仕入先履歴番号;
+            
+            private global::System.Data.DataColumn columnフロアコード;
+            
+            private global::System.Data.DataColumn column掛率コード;
+            
+            private global::System.Data.DataColumn column上代単価;
+            
+            private global::System.Data.DataColumn column下代単価;
+            
+            private global::System.Data.DataColumn column数量;
+            
+            private global::System.Data.DataColumn column事前フラグ;
+            
+            private global::System.Data.DataColumn column取置フラグ;
+            
+            private global::System.Data.DataColumn column課税フラグ;
+            
+            private global::System.Data.DataColumn column入力担当者;
+            
+            private global::System.Data.DataColumn column登録者番号;
+            
+            private global::System.Data.DataColumn column登録日;
+            
+            private global::System.Data.DataColumn column更新者番号;
+            
+            private global::System.Data.DataColumn column更新日;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public W_レジ伝票明細DataTable() {
+                this.TableName = "W_レジ伝票明細";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal W_レジ伝票明細DataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [System.ObsoleteAttribute("This API supports obsolete formatter-based serialization. It should not be called" +
+                " or extended by application code.", DiagnosticId="SYSLIB0051")]
+            protected W_レジ伝票明細DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn 伝票年月日Column {
+                get {
+                    return this.column伝票年月日;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn 入力レジ番号Column {
+                get {
+                    return this.column入力レジ番号;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn カード番号Column {
+                get {
+                    return this.columnカード番号;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn 明細番号Column {
+                get {
+                    return this.column明細番号;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn 商品管理番号Column {
+                get {
+                    return this.column商品管理番号;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn 商品コードColumn {
+                get {
+                    return this.column商品コード;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn バーコードColumn {
+                get {
+                    return this.columnバーコード;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn 商品グループコードColumn {
+                get {
+                    return this.column商品グループコード;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn 商品名Column {
+                get {
+                    return this.column商品名;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn 仕入先コードColumn {
+                get {
+                    return this.column仕入先コード;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn 仕入先履歴番号Column {
+                get {
+                    return this.column仕入先履歴番号;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn フロアコードColumn {
+                get {
+                    return this.columnフロアコード;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn 掛率コードColumn {
+                get {
+                    return this.column掛率コード;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn 上代単価Column {
+                get {
+                    return this.column上代単価;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn 下代単価Column {
+                get {
+                    return this.column下代単価;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn 数量Column {
+                get {
+                    return this.column数量;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn 事前フラグColumn {
+                get {
+                    return this.column事前フラグ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn 取置フラグColumn {
+                get {
+                    return this.column取置フラグ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn 課税フラグColumn {
+                get {
+                    return this.column課税フラグ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn 入力担当者Column {
+                get {
+                    return this.column入力担当者;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn 登録者番号Column {
+                get {
+                    return this.column登録者番号;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn 登録日Column {
+                get {
+                    return this.column登録日;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn 更新者番号Column {
+                get {
+                    return this.column更新者番号;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn 更新日Column {
+                get {
+                    return this.column更新日;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public W_レジ伝票明細Row this[int index] {
+                get {
+                    return ((W_レジ伝票明細Row)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event W_レジ伝票明細RowChangeEventHandler W_レジ伝票明細RowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event W_レジ伝票明細RowChangeEventHandler W_レジ伝票明細RowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event W_レジ伝票明細RowChangeEventHandler W_レジ伝票明細RowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event W_レジ伝票明細RowChangeEventHandler W_レジ伝票明細RowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddW_レジ伝票明細Row(W_レジ伝票明細Row row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public W_レジ伝票明細Row AddW_レジ伝票明細Row(
+                        string 伝票年月日, 
+                        string 入力レジ番号, 
+                        string カード番号, 
+                        int 明細番号, 
+                        string 商品管理番号, 
+                        string 商品コード, 
+                        string バーコード, 
+                        string 商品グループコード, 
+                        string 商品名, 
+                        string 仕入先コード, 
+                        int 仕入先履歴番号, 
+                        string フロアコード, 
+                        string 掛率コード, 
+                        decimal 上代単価, 
+                        decimal 下代単価, 
+                        int 数量, 
+                        bool 事前フラグ, 
+                        bool 取置フラグ, 
+                        bool 課税フラグ, 
+                        string 入力担当者, 
+                        string 登録者番号, 
+                        System.DateTime 登録日, 
+                        string 更新者番号, 
+                        System.DateTime 更新日) {
+                W_レジ伝票明細Row rowW_レジ伝票明細Row = ((W_レジ伝票明細Row)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        伝票年月日,
+                        入力レジ番号,
+                        カード番号,
+                        明細番号,
+                        商品管理番号,
+                        商品コード,
+                        バーコード,
+                        商品グループコード,
+                        商品名,
+                        仕入先コード,
+                        仕入先履歴番号,
+                        フロアコード,
+                        掛率コード,
+                        上代単価,
+                        下代単価,
+                        数量,
+                        事前フラグ,
+                        取置フラグ,
+                        課税フラグ,
+                        入力担当者,
+                        登録者番号,
+                        登録日,
+                        更新者番号,
+                        更新日};
+                rowW_レジ伝票明細Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowW_レジ伝票明細Row);
+                return rowW_レジ伝票明細Row;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public W_レジ伝票明細Row FindBy伝票年月日入力レジ番号カード番号明細番号(string 伝票年月日, string 入力レジ番号, string カード番号, int 明細番号) {
+                return ((W_レジ伝票明細Row)(this.Rows.Find(new object[] {
+                            伝票年月日,
+                            入力レジ番号,
+                            カード番号,
+                            明細番号})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                W_レジ伝票明細DataTable cln = ((W_レジ伝票明細DataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new W_レジ伝票明細DataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.column伝票年月日 = base.Columns["伝票年月日"];
+                this.column入力レジ番号 = base.Columns["入力レジ番号"];
+                this.columnカード番号 = base.Columns["カード番号"];
+                this.column明細番号 = base.Columns["明細番号"];
+                this.column商品管理番号 = base.Columns["商品管理番号"];
+                this.column商品コード = base.Columns["商品コード"];
+                this.columnバーコード = base.Columns["バーコード"];
+                this.column商品グループコード = base.Columns["商品グループコード"];
+                this.column商品名 = base.Columns["商品名"];
+                this.column仕入先コード = base.Columns["仕入先コード"];
+                this.column仕入先履歴番号 = base.Columns["仕入先履歴番号"];
+                this.columnフロアコード = base.Columns["フロアコード"];
+                this.column掛率コード = base.Columns["掛率コード"];
+                this.column上代単価 = base.Columns["上代単価"];
+                this.column下代単価 = base.Columns["下代単価"];
+                this.column数量 = base.Columns["数量"];
+                this.column事前フラグ = base.Columns["事前フラグ"];
+                this.column取置フラグ = base.Columns["取置フラグ"];
+                this.column課税フラグ = base.Columns["課税フラグ"];
+                this.column入力担当者 = base.Columns["入力担当者"];
+                this.column登録者番号 = base.Columns["登録者番号"];
+                this.column登録日 = base.Columns["登録日"];
+                this.column更新者番号 = base.Columns["更新者番号"];
+                this.column更新日 = base.Columns["更新日"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.column伝票年月日 = new global::System.Data.DataColumn("伝票年月日", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column伝票年月日);
+                this.column入力レジ番号 = new global::System.Data.DataColumn("入力レジ番号", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column入力レジ番号);
+                this.columnカード番号 = new global::System.Data.DataColumn("カード番号", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnカード番号);
+                this.column明細番号 = new global::System.Data.DataColumn("明細番号", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column明細番号);
+                this.column商品管理番号 = new global::System.Data.DataColumn("商品管理番号", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column商品管理番号);
+                this.column商品コード = new global::System.Data.DataColumn("商品コード", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column商品コード);
+                this.columnバーコード = new global::System.Data.DataColumn("バーコード", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnバーコード);
+                this.column商品グループコード = new global::System.Data.DataColumn("商品グループコード", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column商品グループコード);
+                this.column商品名 = new global::System.Data.DataColumn("商品名", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column商品名);
+                this.column仕入先コード = new global::System.Data.DataColumn("仕入先コード", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column仕入先コード);
+                this.column仕入先履歴番号 = new global::System.Data.DataColumn("仕入先履歴番号", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column仕入先履歴番号);
+                this.columnフロアコード = new global::System.Data.DataColumn("フロアコード", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnフロアコード);
+                this.column掛率コード = new global::System.Data.DataColumn("掛率コード", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column掛率コード);
+                this.column上代単価 = new global::System.Data.DataColumn("上代単価", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column上代単価);
+                this.column下代単価 = new global::System.Data.DataColumn("下代単価", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column下代単価);
+                this.column数量 = new global::System.Data.DataColumn("数量", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column数量);
+                this.column事前フラグ = new global::System.Data.DataColumn("事前フラグ", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column事前フラグ);
+                this.column取置フラグ = new global::System.Data.DataColumn("取置フラグ", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column取置フラグ);
+                this.column課税フラグ = new global::System.Data.DataColumn("課税フラグ", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column課税フラグ);
+                this.column入力担当者 = new global::System.Data.DataColumn("入力担当者", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column入力担当者);
+                this.column登録者番号 = new global::System.Data.DataColumn("登録者番号", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column登録者番号);
+                this.column登録日 = new global::System.Data.DataColumn("登録日", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column登録日);
+                this.column更新者番号 = new global::System.Data.DataColumn("更新者番号", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column更新者番号);
+                this.column更新日 = new global::System.Data.DataColumn("更新日", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column更新日);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.column伝票年月日,
+                                this.column入力レジ番号,
+                                this.columnカード番号,
+                                this.column明細番号}, true));
+                this.column伝票年月日.AllowDBNull = false;
+                this.column伝票年月日.MaxLength = 8;
+                this.column入力レジ番号.AllowDBNull = false;
+                this.column入力レジ番号.MaxLength = 3;
+                this.columnカード番号.AllowDBNull = false;
+                this.columnカード番号.MaxLength = 9;
+                this.column明細番号.AllowDBNull = false;
+                this.column商品管理番号.MaxLength = 8;
+                this.column商品コード.MaxLength = 15;
+                this.columnバーコード.MaxLength = 13;
+                this.column商品グループコード.MaxLength = 2;
+                this.column商品名.MaxLength = 50;
+                this.column仕入先コード.MaxLength = 3;
+                this.columnフロアコード.MaxLength = 1;
+                this.column掛率コード.MaxLength = 2;
+                this.column事前フラグ.AllowDBNull = false;
+                this.column取置フラグ.AllowDBNull = false;
+                this.column課税フラグ.AllowDBNull = false;
+                this.column入力担当者.MaxLength = 10;
+                this.column登録者番号.MaxLength = 10;
+                this.column更新者番号.MaxLength = 10;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public W_レジ伝票明細Row NewW_レジ伝票明細Row() {
+                return ((W_レジ伝票明細Row)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new W_レジ伝票明細Row(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(W_レジ伝票明細Row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.W_レジ伝票明細RowChanged != null)) {
+                    this.W_レジ伝票明細RowChanged(this, new W_レジ伝票明細RowChangeEvent(((W_レジ伝票明細Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.W_レジ伝票明細RowChanging != null)) {
+                    this.W_レジ伝票明細RowChanging(this, new W_レジ伝票明細RowChangeEvent(((W_レジ伝票明細Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.W_レジ伝票明細RowDeleted != null)) {
+                    this.W_レジ伝票明細RowDeleted(this, new W_レジ伝票明細RowChangeEvent(((W_レジ伝票明細Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.W_レジ伝票明細RowDeleting != null)) {
+                    this.W_レジ伝票明細RowDeleting(this, new W_レジ伝票明細RowChangeEvent(((W_レジ伝票明細Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveW_レジ伝票明細Row(W_レジ伝票明細Row row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                dsBCartLink2 ds = new dsBCartLink2();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "W_レジ伝票明細DataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -11081,6 +11747,574 @@ namespace Bcart受注管理.AppData.Ds {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class W_レジ伝票明細Row : global::System.Data.DataRow {
+            
+            private W_レジ伝票明細DataTable tableW_レジ伝票明細;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal W_レジ伝票明細Row(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableW_レジ伝票明細 = ((W_レジ伝票明細DataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string 伝票年月日 {
+                get {
+                    return ((string)(this[this.tableW_レジ伝票明細.伝票年月日Column]));
+                }
+                set {
+                    this[this.tableW_レジ伝票明細.伝票年月日Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string 入力レジ番号 {
+                get {
+                    return ((string)(this[this.tableW_レジ伝票明細.入力レジ番号Column]));
+                }
+                set {
+                    this[this.tableW_レジ伝票明細.入力レジ番号Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string カード番号 {
+                get {
+                    return ((string)(this[this.tableW_レジ伝票明細.カード番号Column]));
+                }
+                set {
+                    this[this.tableW_レジ伝票明細.カード番号Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int 明細番号 {
+                get {
+                    return ((int)(this[this.tableW_レジ伝票明細.明細番号Column]));
+                }
+                set {
+                    this[this.tableW_レジ伝票明細.明細番号Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string 商品管理番号 {
+                get {
+                    try {
+                        return ((string)(this[this.tableW_レジ伝票明細.商品管理番号Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'W_レジ伝票明細\' にある列 \'商品管理番号\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableW_レジ伝票明細.商品管理番号Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string 商品コード {
+                get {
+                    try {
+                        return ((string)(this[this.tableW_レジ伝票明細.商品コードColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'W_レジ伝票明細\' にある列 \'商品コード\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableW_レジ伝票明細.商品コードColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string バーコード {
+                get {
+                    try {
+                        return ((string)(this[this.tableW_レジ伝票明細.バーコードColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'W_レジ伝票明細\' にある列 \'バーコード\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableW_レジ伝票明細.バーコードColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string 商品グループコード {
+                get {
+                    try {
+                        return ((string)(this[this.tableW_レジ伝票明細.商品グループコードColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'W_レジ伝票明細\' にある列 \'商品グループコード\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableW_レジ伝票明細.商品グループコードColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string 商品名 {
+                get {
+                    try {
+                        return ((string)(this[this.tableW_レジ伝票明細.商品名Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'W_レジ伝票明細\' にある列 \'商品名\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableW_レジ伝票明細.商品名Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string 仕入先コード {
+                get {
+                    try {
+                        return ((string)(this[this.tableW_レジ伝票明細.仕入先コードColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'W_レジ伝票明細\' にある列 \'仕入先コード\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableW_レジ伝票明細.仕入先コードColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int 仕入先履歴番号 {
+                get {
+                    try {
+                        return ((int)(this[this.tableW_レジ伝票明細.仕入先履歴番号Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'W_レジ伝票明細\' にある列 \'仕入先履歴番号\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableW_レジ伝票明細.仕入先履歴番号Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string フロアコード {
+                get {
+                    try {
+                        return ((string)(this[this.tableW_レジ伝票明細.フロアコードColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'W_レジ伝票明細\' にある列 \'フロアコード\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableW_レジ伝票明細.フロアコードColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string 掛率コード {
+                get {
+                    try {
+                        return ((string)(this[this.tableW_レジ伝票明細.掛率コードColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'W_レジ伝票明細\' にある列 \'掛率コード\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableW_レジ伝票明細.掛率コードColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal 上代単価 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableW_レジ伝票明細.上代単価Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'W_レジ伝票明細\' にある列 \'上代単価\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableW_レジ伝票明細.上代単価Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal 下代単価 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableW_レジ伝票明細.下代単価Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'W_レジ伝票明細\' にある列 \'下代単価\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableW_レジ伝票明細.下代単価Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int 数量 {
+                get {
+                    try {
+                        return ((int)(this[this.tableW_レジ伝票明細.数量Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'W_レジ伝票明細\' にある列 \'数量\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableW_レジ伝票明細.数量Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool 事前フラグ {
+                get {
+                    return ((bool)(this[this.tableW_レジ伝票明細.事前フラグColumn]));
+                }
+                set {
+                    this[this.tableW_レジ伝票明細.事前フラグColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool 取置フラグ {
+                get {
+                    return ((bool)(this[this.tableW_レジ伝票明細.取置フラグColumn]));
+                }
+                set {
+                    this[this.tableW_レジ伝票明細.取置フラグColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool 課税フラグ {
+                get {
+                    return ((bool)(this[this.tableW_レジ伝票明細.課税フラグColumn]));
+                }
+                set {
+                    this[this.tableW_レジ伝票明細.課税フラグColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string 入力担当者 {
+                get {
+                    try {
+                        return ((string)(this[this.tableW_レジ伝票明細.入力担当者Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'W_レジ伝票明細\' にある列 \'入力担当者\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableW_レジ伝票明細.入力担当者Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string 登録者番号 {
+                get {
+                    try {
+                        return ((string)(this[this.tableW_レジ伝票明細.登録者番号Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'W_レジ伝票明細\' にある列 \'登録者番号\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableW_レジ伝票明細.登録者番号Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime 登録日 {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableW_レジ伝票明細.登録日Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'W_レジ伝票明細\' にある列 \'登録日\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableW_レジ伝票明細.登録日Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string 更新者番号 {
+                get {
+                    try {
+                        return ((string)(this[this.tableW_レジ伝票明細.更新者番号Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'W_レジ伝票明細\' にある列 \'更新者番号\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableW_レジ伝票明細.更新者番号Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime 更新日 {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableW_レジ伝票明細.更新日Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("テーブル \'W_レジ伝票明細\' にある列 \'更新日\' の値は DBNull です。", e);
+                    }
+                }
+                set {
+                    this[this.tableW_レジ伝票明細.更新日Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Is商品管理番号Null() {
+                return this.IsNull(this.tableW_レジ伝票明細.商品管理番号Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Set商品管理番号Null() {
+                this[this.tableW_レジ伝票明細.商品管理番号Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Is商品コードNull() {
+                return this.IsNull(this.tableW_レジ伝票明細.商品コードColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Set商品コードNull() {
+                this[this.tableW_レジ伝票明細.商品コードColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsバーコードNull() {
+                return this.IsNull(this.tableW_レジ伝票明細.バーコードColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetバーコードNull() {
+                this[this.tableW_レジ伝票明細.バーコードColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Is商品グループコードNull() {
+                return this.IsNull(this.tableW_レジ伝票明細.商品グループコードColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Set商品グループコードNull() {
+                this[this.tableW_レジ伝票明細.商品グループコードColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Is商品名Null() {
+                return this.IsNull(this.tableW_レジ伝票明細.商品名Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Set商品名Null() {
+                this[this.tableW_レジ伝票明細.商品名Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Is仕入先コードNull() {
+                return this.IsNull(this.tableW_レジ伝票明細.仕入先コードColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Set仕入先コードNull() {
+                this[this.tableW_レジ伝票明細.仕入先コードColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Is仕入先履歴番号Null() {
+                return this.IsNull(this.tableW_レジ伝票明細.仕入先履歴番号Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Set仕入先履歴番号Null() {
+                this[this.tableW_レジ伝票明細.仕入先履歴番号Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsフロアコードNull() {
+                return this.IsNull(this.tableW_レジ伝票明細.フロアコードColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetフロアコードNull() {
+                this[this.tableW_レジ伝票明細.フロアコードColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Is掛率コードNull() {
+                return this.IsNull(this.tableW_レジ伝票明細.掛率コードColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Set掛率コードNull() {
+                this[this.tableW_レジ伝票明細.掛率コードColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Is上代単価Null() {
+                return this.IsNull(this.tableW_レジ伝票明細.上代単価Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Set上代単価Null() {
+                this[this.tableW_レジ伝票明細.上代単価Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Is下代単価Null() {
+                return this.IsNull(this.tableW_レジ伝票明細.下代単価Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Set下代単価Null() {
+                this[this.tableW_レジ伝票明細.下代単価Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Is数量Null() {
+                return this.IsNull(this.tableW_レジ伝票明細.数量Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Set数量Null() {
+                this[this.tableW_レジ伝票明細.数量Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Is入力担当者Null() {
+                return this.IsNull(this.tableW_レジ伝票明細.入力担当者Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Set入力担当者Null() {
+                this[this.tableW_レジ伝票明細.入力担当者Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Is登録者番号Null() {
+                return this.IsNull(this.tableW_レジ伝票明細.登録者番号Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Set登録者番号Null() {
+                this[this.tableW_レジ伝票明細.登録者番号Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Is登録日Null() {
+                return this.IsNull(this.tableW_レジ伝票明細.登録日Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Set登録日Null() {
+                this[this.tableW_レジ伝票明細.登録日Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Is更新者番号Null() {
+                return this.IsNull(this.tableW_レジ伝票明細.更新者番号Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Set更新者番号Null() {
+                this[this.tableW_レジ伝票明細.更新者番号Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Is更新日Null() {
+                return this.IsNull(this.tableW_レジ伝票明細.更新日Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Set更新日Null() {
+                this[this.tableW_レジ伝票明細.更新日Column] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -11338,6 +12572,40 @@ namespace Bcart受注管理.AppData.Ds {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public PickingDetailRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class W_レジ伝票明細RowChangeEvent : global::System.EventArgs {
+            
+            private W_レジ伝票明細Row eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public W_レジ伝票明細RowChangeEvent(W_レジ伝票明細Row row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public W_レジ伝票明細Row Row {
                 get {
                     return this.eventRow;
                 }
@@ -17942,6 +19210,348 @@ order by pk.[floor],op.order_products_id
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class W_レジ伝票明細TableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public W_レジ伝票明細TableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "W_レジ伝票明細";
+            tableMapping.ColumnMappings.Add("伝票年月日", "伝票年月日");
+            tableMapping.ColumnMappings.Add("入力レジ番号", "入力レジ番号");
+            tableMapping.ColumnMappings.Add("カード番号", "カード番号");
+            tableMapping.ColumnMappings.Add("明細番号", "明細番号");
+            tableMapping.ColumnMappings.Add("商品管理番号", "商品管理番号");
+            tableMapping.ColumnMappings.Add("商品コード", "商品コード");
+            tableMapping.ColumnMappings.Add("バーコード", "バーコード");
+            tableMapping.ColumnMappings.Add("商品グループコード", "商品グループコード");
+            tableMapping.ColumnMappings.Add("商品名", "商品名");
+            tableMapping.ColumnMappings.Add("仕入先コード", "仕入先コード");
+            tableMapping.ColumnMappings.Add("仕入先履歴番号", "仕入先履歴番号");
+            tableMapping.ColumnMappings.Add("フロアコード", "フロアコード");
+            tableMapping.ColumnMappings.Add("掛率コード", "掛率コード");
+            tableMapping.ColumnMappings.Add("上代単価", "上代単価");
+            tableMapping.ColumnMappings.Add("下代単価", "下代単価");
+            tableMapping.ColumnMappings.Add("数量", "数量");
+            tableMapping.ColumnMappings.Add("事前フラグ", "事前フラグ");
+            tableMapping.ColumnMappings.Add("取置フラグ", "取置フラグ");
+            tableMapping.ColumnMappings.Add("課税フラグ", "課税フラグ");
+            tableMapping.ColumnMappings.Add("入力担当者", "入力担当者");
+            tableMapping.ColumnMappings.Add("登録者番号", "登録者番号");
+            tableMapping.ColumnMappings.Add("登録日", "登録日");
+            tableMapping.ColumnMappings.Add("更新者番号", "更新者番号");
+            tableMapping.ColumnMappings.Add("更新日", "更新日");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Bcart受注管理.Settings.Default.TnbDBConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT [伝票年月日]
+      ,[入力レジ番号]
+      ,[カード番号]
+      ,[明細番号]
+      ,[商品管理番号]
+      ,[商品コード]
+      ,[バーコード]
+      ,[商品グループコード]
+      ,[商品名]
+      ,[仕入先コード]
+      ,[仕入先履歴番号]
+      ,[フロアコード]
+      ,[掛率コード]
+      ,[上代単価]
+      ,[下代単価]
+      ,[数量]
+      ,[事前フラグ]
+      ,[取置フラグ]
+      ,[課税フラグ]
+      ,[入力担当者]
+      ,[登録者番号]
+      ,[登録日]
+      ,[更新者番号]
+      ,[更新日]
+  FROM [tnb].[dbo].[W_レジ伝票明細]
+  WHERE [カード番号] = @カード番号
+AND  [入力レジ番号] ='150'
+order by [伝票年月日],[明細番号]";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@カード番号", global::System.Data.SqlDbType.NVarChar, 9, global::System.Data.ParameterDirection.Input, 0, 0, "カード番号", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "DELETE tnb.dbo.W_レジ伝票明細\r\n WHERE [伝票年月日] = @伝票年月日\r\n and [入力レジ番号] = @入力レジ番号\r\n and [" +
+                "カード番号] = @カード番号\r\n and [明細番号] = @明細番号\r\n";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@伝票年月日", global::System.Data.SqlDbType.NChar, 8, global::System.Data.ParameterDirection.Input, 0, 0, "伝票年月日", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@入力レジ番号", global::System.Data.SqlDbType.NChar, 3, global::System.Data.ParameterDirection.Input, 0, 0, "入力レジ番号", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@カード番号", global::System.Data.SqlDbType.NVarChar, 9, global::System.Data.ParameterDirection.Input, 0, 0, "カード番号", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@明細番号", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "明細番号", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "UPDATE       W_レジ伝票明細\r\nSET            伝票年月日 = @変更伝票日付, 明細番号 = @変更明細番号\r\nWHERE     " +
+                "   (伝票年月日 = @伝票年月日) AND (入力レジ番号 = @入力レジ番号) AND (カード番号 = @カード番号) AND (明細番号 = @明細番" +
+                "号)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@変更伝票日付", global::System.Data.SqlDbType.NChar, 8, global::System.Data.ParameterDirection.Input, 0, 0, "伝票年月日", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@変更明細番号", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "明細番号", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@伝票年月日", global::System.Data.SqlDbType.NChar, 8, global::System.Data.ParameterDirection.Input, 0, 0, "伝票年月日", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@入力レジ番号", global::System.Data.SqlDbType.NChar, 3, global::System.Data.ParameterDirection.Input, 0, 0, "入力レジ番号", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@カード番号", global::System.Data.SqlDbType.NVarChar, 9, global::System.Data.ParameterDirection.Input, 0, 0, "カード番号", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@明細番号", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "明細番号", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(dsBCartLink2.W_レジ伝票明細DataTable dataTable, string カード番号) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((カード番号 == null)) {
+                throw new global::System.ArgumentNullException("カード番号");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(カード番号));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual dsBCartLink2.W_レジ伝票明細DataTable GetData(string カード番号) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((カード番号 == null)) {
+                throw new global::System.ArgumentNullException("カード番号");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(カード番号));
+            }
+            dsBCartLink2.W_レジ伝票明細DataTable dataTable = new dsBCartLink2.W_レジ伝票明細DataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int DeleteRegiRow(string 伝票年月日, string 入力レジ番号, string カード番号, int 明細番号) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((伝票年月日 == null)) {
+                throw new global::System.ArgumentNullException("伝票年月日");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(伝票年月日));
+            }
+            if ((入力レジ番号 == null)) {
+                throw new global::System.ArgumentNullException("入力レジ番号");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(入力レジ番号));
+            }
+            if ((カード番号 == null)) {
+                throw new global::System.ArgumentNullException("カード番号");
+            }
+            else {
+                command.Parameters[2].Value = ((string)(カード番号));
+            }
+            command.Parameters[3].Value = ((int)(明細番号));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int UpdateChangeDate(string 変更伝票日付, int 変更明細番号, string 伝票年月日, string 入力レジ番号, string カード番号, int 明細番号) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            if ((変更伝票日付 == null)) {
+                throw new global::System.ArgumentNullException("変更伝票日付");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(変更伝票日付));
+            }
+            command.Parameters[1].Value = ((int)(変更明細番号));
+            if ((伝票年月日 == null)) {
+                throw new global::System.ArgumentNullException("伝票年月日");
+            }
+            else {
+                command.Parameters[2].Value = ((string)(伝票年月日));
+            }
+            if ((入力レジ番号 == null)) {
+                throw new global::System.ArgumentNullException("入力レジ番号");
+            }
+            else {
+                command.Parameters[3].Value = ((string)(入力レジ番号));
+            }
+            if ((カード番号 == null)) {
+                throw new global::System.ArgumentNullException("カード番号");
+            }
+            else {
+                command.Parameters[4].Value = ((string)(カード番号));
+            }
+            command.Parameters[5].Value = ((int)(明細番号));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class QueriesTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.IDbCommand[] _commandCollection;
@@ -17960,7 +19570,7 @@ order by pk.[floor],op.order_products_id
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.IDbCommand[5];
+            this._commandCollection = new global::System.Data.IDbCommand[6];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Connection = new global::System.Data.SqlClient.SqlConnection(global::Bcart受注管理.Settings.Default.BCartDBConnectionString);
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).CommandText = "dbo.S_DeleteOrder2";
@@ -17994,6 +19604,11 @@ order by pk.[floor],op.order_products_id
                 "servedID)";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[4])).CommandType = global::System.Data.CommandType.Text;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[4])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@reservedID", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "reserved_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).Connection = new global::System.Data.SqlClient.SqlConnection(global::Bcart受注管理.Settings.Default.TnbDBConnectionString);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).CommandText = "select mc.営業フラグ\r\nfrom tnb.dbo.M_カレンダ mc\r\nwhere mc.年月日 = @年月日\r\n";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).CommandType = global::System.Data.CommandType.Text;
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@年月日", global::System.Data.SqlDbType.NChar, 8, global::System.Data.ParameterDirection.Input, 0, 0, "年月日", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -18140,6 +19755,40 @@ order by pk.[floor],op.order_products_id
             }
             else {
                 return new global::System.Nullable<long>(((long)(returnValue)));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<bool> getEigyoFlag(string 年月日) {
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[5]));
+            if ((年月日 == null)) {
+                throw new global::System.ArgumentNullException("年月日");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(年月日));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<bool>();
+            }
+            else {
+                return new global::System.Nullable<bool>(((bool)(returnValue)));
             }
         }
     }

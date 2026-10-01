@@ -45,7 +45,7 @@
             btnRegi = new Button();
             btnReserved = new Button();
             btnShippingInspection = new Button();
-            btnProductImage = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // btnOrder
@@ -252,24 +252,23 @@
             btnShippingInspection.UseVisualStyleBackColor = true;
             btnShippingInspection.Click += btnShippingInspection_Click;
             // 
-            // btnProductImage
+            // button1
             // 
-            btnProductImage.Location = new Point(11, 735);
-            btnProductImage.Margin = new Padding(6);
-            btnProductImage.Name = "btnProductImage";
-            btnProductImage.Size = new Size(588, 49);
-            btnProductImage.TabIndex = 74;
-            btnProductImage.Text = "ピッキング用商品画像取込";
-            btnProductImage.UseVisualStyleBackColor = true;
-            btnProductImage.Visible = false;
-            btnProductImage.Click += btnProductImage_Click;
+            button1.Location = new Point(9, 731);
+            button1.Margin = new Padding(6);
+            button1.Name = "button1";
+            button1.Size = new Size(587, 49);
+            button1.TabIndex = 75;
+            button1.Text = "レジ事前登録の修正";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // frmMenu
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(611, 980);
-            Controls.Add(btnProductImage);
+            Controls.Add(button1);
             Controls.Add(btnShippingInspection);
             Controls.Add(btnReserved);
             Controls.Add(btnRegi);
@@ -316,6 +315,6 @@
         private Button btnRegi;
         private Button btnReserved;
         private Button btnShippingInspection;
-        private Button btnProductImage;
+        private Button button1;
     }
 }
